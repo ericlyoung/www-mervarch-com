@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  www:
+    build:
+      context: .
+    init: true
+    command:
+      - /app/boot.sh
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - '3000:3000'

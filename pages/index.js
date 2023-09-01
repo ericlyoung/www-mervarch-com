@@ -2,18 +2,18 @@ import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="container">
+    <div className='container'>
       <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>The Merovingian Architecture</title>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
+        <Header title='The Merovingian Architecture' />
+        <p className='description'>
+          DDD, CQRS, Event Sourcing, Sanity
         </p>
       </main>
 
@@ -21,3 +21,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
