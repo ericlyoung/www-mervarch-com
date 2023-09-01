@@ -1,4 +1,3 @@
-import '@styles/globals.css'
 import Providers from '../Providers'
 
 const Application = ({ Component, pageProps }) =>
