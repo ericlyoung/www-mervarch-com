@@ -1,19 +1,25 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-
+import { Grid, GridItem, Image } from '@chakra-ui/react'
 const Home = () => {
   return (
-    <div className='container'>
-      <Head>
-        <title>The Merovingian Architecture</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <main>
-        <Header title='The Merovingian Architecture' />
+    <Grid
+      templateAreas={`"header header" "nav main"`}
+      gridTemplateRows={'50px 1fr'}
+      gridTemplateColumns={'150px 1fr'}
+      h='200px'
+      gap='1'
+      color='blackAlpha.700'
+      fontWeight='bold'
+    >
+      <GridItem pl='2' bg='orange.300' area={'header'}>
+        Header
+      </GridItem>
+      <GridItem pl='2' bg='pink.300' area={'nav'}>
+        Nav
+      </GridItem>
+      <GridItem pl='2' bg='green.300' area={'main'}>
+        The Merovingian Architecture
         <p>
-          <img style={{ width: '500px', maxWidth: '100%' }} src='https://merv-arch.s3.us-west-2.amazonaws.com/merovingian.jpg' />
+          <Image src='https://merv-arch.s3.us-west-2.amazonaws.com/merovingian.jpg' />
         </p>
 
         <em>
@@ -30,10 +36,15 @@ const Home = () => {
         <p>
           DDD, CQRS, Event Sourcing, Sanity
         </p>
-      </main>
 
-      <Footer />
-    </div>
+        <p>
+          Straight to business, like Trinity -
+        </p>
+      </GridItem>
+      <GridItem pl='2' bg='blue.300' area={'footer'}>
+        Footer
+      </GridItem>
+    </Grid>
   )
 }
 
