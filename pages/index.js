@@ -100,7 +100,7 @@ const Home = () => {
           <br />
           Let's get philosophical for a moment (just kidding, I always am).  These events are named in past tense, because they are always reflected upon (used to alter state) at a future time, even if that future time is the next cpu tick.  Likewise, when something happens (an event) in physical reality, we only observe it happening after it has already happened, and our response to it can only happen after the observation.  Consider the chain of causality:  prime mover causes an event (user clicks a button), we observe it (pub/sub), we consider what we observed (possible conditional logic), and possibly take action (effect) to become our own prime mover.  This chain of causation can continue indefinitely, or until there's no more energy left in existence with which to convert into expressions of will.
           <br />
-          Also, consider the Pharaoh Rameses II's proclamation from "The Ten Commandments" (1956) (so aptly named?) - "So let it be written, so let it be done".  What is written?  The Event.  What is done?  The Effect(s).
+          Also, consider Pharaoh Rameses II's proclamation from "The Ten Commandments" (1956) (so aptly named?) - "So let it be written, so let it be done".  What is written?  The Event.  What is done?  The Effect(s).
         </Text>
       </Concept>
 
