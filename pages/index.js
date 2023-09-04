@@ -57,7 +57,7 @@ const Home = () => {
 
       <Qa
         q='Is this just CQRS?'
-        a='It definitely is CQRS, but also DDD, Event Sourcing, and a strategy to organize your Event Effects and how to generate/maintain a read store of your business entities (orders, users, etc.)'
+        a='It definitely is CQRS, but also DDD, EDA, Event Sourcing, and a strategy to organize your Event Effects and how to generate/maintain a read store of your business entities (orders, users, etc.)'
       />
 
       <Qa
