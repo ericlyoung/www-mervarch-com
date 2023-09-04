@@ -92,23 +92,25 @@ const Home = () => {
         </Text>
 
         <Text p={1}>
-          At this "Command Layer" you're speaking to the manager and he knows what his team can do and cannot do.
-          <br />
           Commands can be accepted or rejected, just like in real life.
+          <br />
+          At this "Command Layer" you're speaking to the manager and he knows what his team can do and cannot do.
           <br />
           Your business logic validation, authentication, et cetera lives right here.  Commands are the way your system receives state altering data, you decide what to accept or reject right here.
         </Text>
       </Concept>
 
       <Concept name='Events'>
-        <Text>
-          If a command is accepted one or more Events can be written.  Because Events are typically the result of a command, and they are usually named accordingly.
+        <Text p={1}>
+          If a command is accepted, one or more Events can be persisted.  The commands above would generate the following Events:
           <br />
           "VisitorSubmittedContactForm", "UserUpdatedEmail", "ManagerOverrodePrice"
           <br />
           Aside from the event name, the data from the command is stored alongside, or not.  Additional data can be added or anything omitted, there's no hard rule, only the concept.
-          <br />
-          Let's get philosophical for a moment (just kidding, I always am).  These events are named in past tense, because they are always reflected upon (used to alter state) at a future time, even if that future time is the next cpu tick.  Likewise, when something happens (an event) in physical reality, we only observe it happening after it has already happened, and our response to it can only happen after the observation.  Consider the chain of causality:  prime mover causes an event (user clicks a button), we observe it (pub/sub), we consider what we observed (possible conditional logic), and possibly take action (effect) to become our own prime mover.  This chain of causation can continue indefinitely, or until there's no more energy left in existence with which to convert into expressions of will.
+        </Text>
+
+        <Text p={1}>
+          Let's get philosophical for a moment (Just kidding, I always am).  These events are named in past tense, because they are reflected upon (used to alter state) at a future time, even if that future time is the next cpu tick.  Likewise, when something happens (an event) in physical reality, we only observe it happening after it has already happened, and our response to it can only happen after the observation.  Consider the chain of causality:  prime mover causes an event (user clicks a button), we observe it (pub/sub), we consider what we observed (possible conditional logic), and possibly take action (effect) to become our own prime mover.  This chain of causation can continue indefinitely, or until there's no more energy left in existence with which to convert into expressions of will.
           <br />
           Also, consider Pharaoh Rameses II's proclamation from "The Ten Commandments" (1956) (so aptly named?) - "So let it be written, so let it be done".  What is written?  The Event.  What is done?  The Effect(s).
         </Text>
