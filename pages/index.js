@@ -6,6 +6,17 @@ const Qa = ({ q, a }) =>
     <Text>{a}</Text>
   </Box>
 
+const Concept = ({ name, children }) =>
+  <Box mt={5}>
+    <Heading size='sm' mt={1}>
+      {name}
+    </Heading>
+
+    <Box mt={1}>
+      {children}
+    </Box>
+  </Box>
+
 const headingColor = '#6c4e8e'
 
 const Home = () => {
@@ -46,34 +57,70 @@ const Home = () => {
 
       <Qa
         q='What language do I have to use?'
-        a="Any (see, it's not a framework)"
+        a="Any (see, it's not a framework) (this allows you to stop using frameworks forever)"
       />
 
-      <Divider mt={10} />
+      <Box mt={3}>
+        <Heading color={headingColor} size='md' mt={10}>
+          The Concepts
+        </Heading>
+      </Box>
 
-      <Heading color={headingColor} size='md' mt={10}>
-        The components
-      </Heading>
+      <Concept name='Commands'>
+        <Text p={1}>
+          Commands are phrases in the imperative present tense, like a git commit.  Like a git commit they can carry with them some data used to alter state.
+        </Text>
 
-      <Heading size='sm'>
-        Commands
-      </Heading>
+        <Text p={1}>
+          I have been using pascal case to define my commands:
+          <br />
+          "VisitorSubmitContactForm", "UserUpdateEmail", "ManagerOverridePrice"
+          <br />
+          I have been using the format of [Actor][Action][Subject]
+          <br />
+          or, Who's doing what to what?
+        </Text>
 
-      <Heading size='sm'>
-        Events
-      </Heading>
+        <Text p={1}>
+          At this "Command Layer" you're speaking to the manager and he knows what his team can do and cannot do.
+          <br />
+          Commands can be accepted or rejected, just like in real life.
+          <br />
+          Your business logic validation, authentication, et cetera lives right here.  Commands are the way your system receives state altering data, you decide what to accept or reject right here.
+        </Text>
+      </Concept>
 
-      <Heading size='sm'>
-        Effects
-      </Heading>
+      <Concept name='Events'>
+        <Text>
+          If a command is accepted one or more Events can be written.  Because Events are typically the result of a command, and they are usually named accordingly.
+          <br />
+          "VisitorSubmittedContactForm", "UserUpdatedEmail", "ManagerOverrodePrice"
+          <br />
+          Let's get philosophical for a moment (just kidding, I always am).  These events are named in past tense, because they are always reflected upon (used to alter state) at a future time, even if that future time is the next cpu tick.  Likewise, when something happens (an event) in physical reality, we only observe it happening after it has already happened, and our response to it can only happen after the observation.  Consider the chain of causality:  prime mover causes an event (user clicks a button), we observe it (pub/sub), we consider what we observed (possible conditional logic), and possibly take action (effect) to become our own prime mover.  This chain of causation can continue indefinitely, or until there's no more energy left in existence with which to convert into expressions of will.
+          <br />
+          Aside from the event name, the data from the command is stored alongside, or not.  Additional data can be added or anything omitted, there's no hard rule, only the concept.
+          <br />
+          Consider the Pharaoh Rameses II's proclamation from "The Ten Commandments" (1956) (so aptly named?) - "So let it be written, so let it be done".  What is written?  The Event.  What is done?  The Effect(s).
+        </Text>
+      </Concept>
 
-      <Heading size='sm'>
-        Aggregates
-      </Heading>
+      <Concept name='Effects'>
+        <Text>
+          effects
+        </Text>
+      </Concept>
 
-      <Heading size='sm'>
-        Read store
-      </Heading>
+      <Concept name='Aggregates'>
+        <Text>
+          aggregates
+        </Text>
+      </Concept>
+
+      <Concept name='Read store'>
+        <Text>
+          read store
+        </Text>
+      </Concept>
 
       ...
 
