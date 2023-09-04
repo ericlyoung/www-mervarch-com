@@ -47,7 +47,7 @@ const Home = () => {
 
       <Qa
         q='Why is it called The Merovingian Architecture'
-        a='One of the main components is CQRS.  Commands come in to the system, and if your business logic gives the go-ahead, an "Event" is persisted and then one or more "Effects" can happen.  Those with power, give commands.  Those without power, the Effects, do as they are told.'
+        a='Commands come in to the system (a "Cause") and if your business logic gives the go-ahead, an "Event" is persisted and then one or more "Effects" can happen.  Everything boils down to cause and effect.  With a complete history of Events, the Merovingian architecture allows you to have full understanding of the "why". ("why is this order in a state of canceled?")  "Why is what separates us from them"'
       />
 
       <Qa
@@ -56,8 +56,18 @@ const Home = () => {
       />
 
       <Qa
+        q='Is this just CQRS?'
+        a='It definitely is CQRS, but also DDD, Event Sourcing, and a strategy to organize your Event Effects and how to generate/maintain a read store of your business entities (orders, users, etc.)'
+      />
+
+      <Qa
+        q='If this is just a collection of pre-existing concepts, why give a name and make it a thing?'
+        a='As I was breaking away from OOP and REST/CRUD frameworks it took me weeks of cherry-picking concepts in order to create my ideal web backend architecure.  Merv is the result of that effort.'
+      />
+
+      <Qa
         q='What language do I have to use?'
-        a="Any (see, it's not a framework) (this allows you to stop using frameworks forever)"
+        a="Any (see, it's not a framework)"
       />
 
       <Box mt={3}>
