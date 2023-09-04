@@ -94,8 +94,6 @@ const Home = () => {
         <Text p={1}>
           Commands can be accepted or rejected, just like in real life.
           <br />
-          At this "Command Layer" you're speaking to the manager and he knows what his team can do and cannot do.
-          <br />
           Your business logic validation, authentication, et cetera lives right here.  Commands are the way your system receives state altering data, you decide what to accept or reject right here.
         </Text>
       </Concept>
