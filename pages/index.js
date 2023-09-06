@@ -24,7 +24,7 @@ const Home = () => {
     <Container maxWidth='1180'>
       <Container maxWidth='100%' centerContent>
         <Heading pt='9' pb='9' color={headingColor}>
-          The Merovingian Architecture
+          The Merovingian Architecture (Merv)
         </Heading>
 
         <Image width='550px' src='https://merv-arch.s3.us-west-2.amazonaws.com/merovingian.jpg' />
@@ -61,8 +61,8 @@ const Home = () => {
       />
 
       <Qa
-        q='If this is just a collection of pre-existing concepts, why give a name and make it a thing?'
-        a='As I was breaking away from OOP and REST/CRUD frameworks it took me weeks of cherry-picking concepts in order to create my ideal web backend architecure.  Merv is the result of that effort.'
+        q='If this is just a collection of pre-existing concepts, why give it a name and make it a thing?'
+        a='As I was breaking away from OOP and REST/CRUD frameworks I spent weeks cherry picking bits and pieces to create my ideal web backend architecure.  Merv is the result of that effort.'
       />
 
       <Qa
@@ -86,9 +86,7 @@ const Home = () => {
           <br />
           "VisitorSubmitContactForm", "UserUpdateEmail", "ManagerOverridePrice"
           <br />
-          I have been using the format of [Actor][Action][Subject]
-          <br />
-          or, Who's doing what to what?
+          [Actor][Action][Subject], Who's doing what to what
         </Text>
 
         <Text p={1}>
@@ -114,15 +112,37 @@ const Home = () => {
         </Text>
       </Concept>
 
-      <Concept name='Effects'>
+      <Concept name='Streams'>
         <Text>
-          effects
+          Taken directly from the Event Sourcing world.  A Stream is a named series of Events.  Simple, but extremely powerful concept.
         </Text>
       </Concept>
 
-      <Concept name='Aggregates'>
+      <Concept name='Effects'>
         <Text>
-          aggregates
+          Ah, the effects.  Those that do as they are told.  An unwilling link in the chain [of cause and effect].
+          <br />
+          Something has been written, and now something will be done.
+          <br />
+          Here's some common examples:
+          <br />
+          A form submission event (VisitorSubmitContactForm) lands in the event store and in response to that we'll drop a document in mongo.
+          <br />
+          Of course more than one effect can be bound, so in addition we'll create a Task in our system for a sales agent to munch on.
+          <br />
+          A note on TIME.  Effects are real-time only.  There's no such thing as "replaying" effects.  Merv respects nature and in nature events happen only in the now, and their effects also only happen in the now.  Note that I'm not talking about the concept of replaying Events in order to build or rebuild state; that is done constantly in Merv.  Events get played and replayed frequently, like your VHS copy of Beauty and the Beast as a child (you can an admit it, err, ok I will), but Effects are for the now only.
+          <br />
+          Since Effects are time-safe, you can know that you're safe to do stuff that is time relevant, like send a text message or webhook.
+        </Text>
+      </Concept>
+
+      <Concept name='Derivatives'>
+        <Text>
+          Let's look at some etymology:
+          <br />
+          The Latin roots of “derive” are de, a prefix that means “from,” and rivus, a word that means “stream”.
+          <br />
+          A derivative in Merv is the current state of a stream.  The etymology lines up perfectly here.
         </Text>
       </Concept>
 
