@@ -96,13 +96,24 @@ const Home = () => {
         </Text>
       </Concept>
 
+      <Concept name='Streams'>
+        <Text p={1}>
+          Taken directly from the Event Sourcing world.  A Stream is a named series of Events.  Simple, but extremely powerful concept.
+        </Text>
+
+        <Text p={1}>
+          Required viewing:
+        </Text>
+        <iframe width='330' src='https://www.youtube.com/embed/JHGkaShoyNs?si=BgOwKnYSmrSmgh3V' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen />
+      </Concept>
+
       <Concept name='Events'>
         <Text p={1}>
-          If a command is accepted, one or more Events can be persisted.  The commands above would generate the following Events:
+          If a command is accepted, one or more Events can be persisted [to a stream].  The commands examples above could generate the following Events:
           <br />
           "VisitorSubmittedContactForm", "UserUpdatedEmail", "ManagerOverrodePrice"
           <br />
-          Aside from the event name, the data from the command is stored alongside, or not.  Additional data can be added or anything omitted, there's no hard rule, only the concept.
+          Aside from the event name, the data from the command is stored alongside, or not.  Additional data can be added or anything omitted, there's no hard rule, do whatever is needed for your domain.
         </Text>
 
         <Text p={1}>
@@ -112,14 +123,8 @@ const Home = () => {
         </Text>
       </Concept>
 
-      <Concept name='Streams'>
-        <Text>
-          Taken directly from the Event Sourcing world.  A Stream is a named series of Events.  Simple, but extremely powerful concept.
-        </Text>
-      </Concept>
-
       <Concept name='Effects'>
-        <Text>
+        <Text p={1}>
           Ah, the effects.  Those that do as they are told.  Unwilling links in the chain [of cause and effect].
           <br />
           Something has been written, and now something will be done.
@@ -137,12 +142,13 @@ const Home = () => {
       </Concept>
 
       <Concept name='Derivatives'>
-        <Text>
+        <Text p={1}>
           Let's look at some etymology:
           <br />
           The Latin roots of “derive” are de, a prefix that means “from,” and rivus, a word that means “stream”.
           <br />
           A derivative in Merv is the current state of a stream.  The etymology lines up perfectly here.
+          <br />
         </Text>
       </Concept>
 
