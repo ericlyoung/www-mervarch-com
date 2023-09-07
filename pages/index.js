@@ -41,28 +41,28 @@ const Home = () => {
       <Heading mt={10} size='md' color={headingColor}>Here's some high level Q and A to intrigue [or confuse] you.</Heading>
 
       <Qa
-        q='What is this'
+        q='What is it?'
         a='The Merovingian Architecture, Merv, is a collection of simple concepts that, when used together, create a beautiful web application backend.'
       />
 
       <Qa
-        q='Why is it called The Merovingian Architecture'
-        a='Commands come in to the system (a "Cause") and if your business logic gives the go-ahead, an "Event" is persisted and then one or more "Effects" can happen.  Everything boils down to cause and effect.  With a complete history of Events, the Merovingian architecture allows you to have full understanding of the "why". ("why is this order in a state of canceled?")  "Why is what separates us from them"'
+        q='Is there something to install?'
+        a={'No.  Merv takes the "Teach a man to fish..." approach.  I\'m busy catching my own fish and happy to teach.'}
       />
 
       <Qa
-        q='Give me the elevator pitch'
-        a="No, I'm not selling anything.  I simply love what I've built and feel compelled to share it because it brings me so much joy in my daily work."
+        q='Why is it called The Merovingian Architecture'
+        a='The Merovingian, my favorite character from my favorite movie!  Cause and Effect.  A powerful rule of nature.  Maybe the only rule.  "Commands" come in to the system and are considered a "Cause".  An "Event" is persisted and then one or more "Effects" happen.  Think of "Events" as recorded causes.  Everything boils to cause and effect.  With a complete history of Events, the Merovingian architecture allows you to have full understanding of system state.  Full understanding of how things came to be gives you the Why.  ("Why is what separates us from them" - the Merv)'
       />
 
       <Qa
         q='Is this just CQRS?'
-        a='It definitely is CQRS, but also DDD, EDA, Event Sourcing, and a strategy to organize your Event Effects and how to generate/maintain a read store of your business entities (orders, users, etc.)'
+        a='It definitely is CQRS, but also DDD, EDA, Event Sourcing, and a strategy to organize your Event Effects and how to generate/maintain a read store of your business entities (orders, users, et cetera.)'
       />
 
       <Qa
         q='If this is just a collection of pre-existing concepts, why give it a name and make it a thing?'
-        a='As I was breaking away from OOP and REST/CRUD frameworks I spent weeks cherry picking bits and pieces to create my ideal web backend architecure.  Merv is the result of that effort.'
+        a='As I was crawling out of the ooze (OOP and REST/CRUD frameworks) I spent weeks cherry picking bits and pieces to create my ideal web backend architecure.  Merv is the result of that effort.'
       />
 
       <Qa
@@ -78,7 +78,7 @@ const Home = () => {
 
       <Concept name='Commands'>
         <Text p={1}>
-          Commands are phrases in the imperative present tense, like a git commit.  Like a git commit they can carry with them some data used to alter state.
+          Commands are phrases in the imperative present tense, like a git commit.  Like a git commit they can carry with them some data, potentially used to alter state.
         </Text>
 
         <Text p={1}>
@@ -120,7 +120,7 @@ const Home = () => {
 
       <Concept name='Effects'>
         <Text>
-          Ah, the effects.  Those that do as they are told.  An unwilling link in the chain [of cause and effect].
+          Ah, the effects.  Those that do as they are told.  Unwilling links in the chain [of cause and effect].
           <br />
           Something has been written, and now something will be done.
           <br />
