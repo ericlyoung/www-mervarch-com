@@ -109,7 +109,7 @@ const Home = () => {
 
       <Concept name='Events'>
         <Text p={1}>
-          If a command is accepted, one or more Events can be persisted [to a stream].  The commands examples above could generate the following Events:
+          If a command is accepted, one or more Events can be persisted [to a stream].  The command examples above could generate the following Events:
           <br />
           "VisitorSubmittedContactForm", "UserUpdatedEmail", "ManagerOverrodePrice"
           <br />
