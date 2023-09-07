@@ -143,11 +143,11 @@ const Home = () => {
 
       <Concept name='Derivatives'>
         <Text p={1}>
-          Let's look at some etymology:
+          Some event sourcers call these aggregates.  I use a more accurate word.  Derivative.
           <br />
-          The Latin roots of “derive” are de, a prefix that means “from,” and rivus, a word that means “stream”.
+          The Latin roots of “derive” are de, a prefix that means “from” and rivus, a word that means “stream”.
           <br />
-          A derivative in Merv is the current state of a stream.  The etymology lines up perfectly here.
+          The etymology lines up perfectly here.  A derivative in Merv is the current state of a stream.
           <br />
         </Text>
       </Concept>
