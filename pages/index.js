@@ -1,4 +1,7 @@
-import { Divider, Text, Container, Heading, Image, Box } from '@chakra-ui/react'
+import {
+  Divider, Text, Container, Heading, Image, Box, Link
+} from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const Qa = ({ q, a }) =>
   <Box mt={6}>
@@ -21,7 +24,7 @@ const headingColor = '#6c4e8e'
 
 const Home = () => {
   return (
-    <Container maxWidth='1180'>
+    <Container maxWidth='1180' pb={10}>
       <Container maxWidth='100%' centerContent>
         <Heading pt='9' pb='9' color={headingColor}>
           The Merovingian Architecture (Merv)
@@ -158,8 +161,15 @@ const Home = () => {
         </Text>
       </Concept>
 
-      ...
+      <Divider mt={10} />
 
+      <Heading mt={10} size='md' color={headingColor}>Example repo</Heading>
+
+      <Box>
+        <Link href='https://github.com/merv-arch/example' isExternal>
+          https://github.com/merv-arch/example <ExternalLinkIcon mx='2px' />
+        </Link>
+      </Box>
     </Container>
   )
 }
