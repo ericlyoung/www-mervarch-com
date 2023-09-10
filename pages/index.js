@@ -163,12 +163,16 @@ const Home = () => {
 
       <Divider mt={10} />
 
-      <Heading mt={10} size='md' color={headingColor}>Example repo</Heading>
+      <Heading mt={10} mb={5} size='md' color={headingColor}>Example repo</Heading>
 
       <Box>
-        <Link href='https://github.com/merv-arch/example' isExternal>
+        <Link p={1} href='https://github.com/merv-arch/example' isExternal>
           https://github.com/merv-arch/example <ExternalLinkIcon mx='2px' />
         </Link>
+
+        <Text p={1}>
+          The example project shows off all the concepts explained above.
+        </Text>
       </Box>
     </Container>
   )
