@@ -87,7 +87,7 @@ const Home = () => {
         <Text p={1}>
           I have been using pascal case to define my commands:
           <br />
-          "VisitorSubmitContactForm", "UserUpdateEmail", "ManagerOverridePrice"
+          "VisitorSubmittedContactForm", "UserUpdateEmail", "ManagerOverridePrice"
           <br />
           [Actor][Action][Subject], Who's doing what to what
         </Text>
