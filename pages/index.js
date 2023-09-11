@@ -87,7 +87,7 @@ const Home = () => {
         <Text p={1}>
           I have been using pascal case to define my commands:
           <br />
-          "VisitorSubmittedContactForm", "UserUpdateEmail", "ManagerOverridePrice"
+          "VisitorSubmitContactForm", "UserUpdateEmail", "ManagerOverridePrice"
           <br />
           [Actor][Action][Subject], Who's doing what to what
         </Text>
@@ -134,7 +134,7 @@ const Home = () => {
           <br />
           Here's some common examples:
           <br />
-          A form submission event (VisitorSubmitContactForm) lands in the event store and in response to that we'll drop a document in mongo.
+          A form submission event (VisitorSubmittedContactForm) lands in the event store and in response to that we'll drop a document in mongo.
           <br />
           Of course more than one effect can be bound, so in addition we'll create a Task in our system for a sales agent to munch on.
           <br />
