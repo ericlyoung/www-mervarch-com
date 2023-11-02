@@ -65,7 +65,7 @@ const Home = () => {
 
       <Qa
         q='If this is just a collection of pre-existing concepts, why give it a name and make it a thing?'
-        a='As I was crawling out of the ooze (OOP and REST/CRUD frameworks) I spent weeks cherry picking bits and pieces to create my ideal web backend architecure.  Merv is the result of that effort.'
+        a={`As I was crawling out of the ooze (OOP and REST/CRUD frameworks) I spent weeks cherry picking bits and pieces to create my ideal web backend architecure.  Merv is the result of that effort and I'm sharing it.`}
       />
 
       <Qa
@@ -157,21 +157,43 @@ const Home = () => {
 
       <Concept name='Read store'>
         <Text>
-          read store
+          You can think of each stream ("Order:123") to be like a git repo.  After you play all Events ("commits") forward you end with the "current state" of the Order.  Say you want to render a list of Orders on your CRM..  You can't simply play all the many events forward with every request in order to yield the current state of each order.  The read store is a separate database that stores the current state of each stream that you're interested in querying.  I've been liking mongo recently.
+          <br />
+          Your GraphQL resolvers will only know about the read store and not the streams.  Not a hard rule, but for most cases this will be true.  (Obviously a single stream could supply data to a singular resolver endpoint, just not a "list of Orders")
         </Text>
       </Concept>
 
       <Divider mt={10} />
 
-      <Heading mt={10} mb={5} size='md' color={headingColor}>Example repo</Heading>
+      <Heading mt={10} mb={5} size='md' color={headingColor}>Example project</Heading>
 
       <Box>
-        <Link p={1} href='https://github.com/merv-arch/example' isExternal>
+        <Link color='purple' p={1} href='https://github.com/merv-arch/example' isExternal>
           https://github.com/merv-arch/example <ExternalLinkIcon mx='2px' />
         </Link>
 
         <Text p={1}>
           The example project shows off all the concepts explained above.
+          <br />
+          You can run it locally with docker, read the readme.  I have it distilled down to a single 'docker-compose up'
+          <br />
+          <em><b>
+          Until I can spend more time on docker compose service boot ordering via health checks, for your first boot please bring up postgres and mongo first separately ('docker-compose up postgres') ('docker-compose up mongo'), then 'docker-compose up' after those are booted and idle.
+          </b></em>
+          <br />
+          I'm building out the frontend to be a dedicated visual teaching tool.  Lots of work to do yet, but even my first scenario reveals much.
+        </Text>
+      </Box>
+
+      <Heading mt={5} mb={5} size='md' color={headingColor}>Live Demo</Heading>
+
+      <Box>
+        <Link color='purple' p={1} href='https:/demo.mervarch.com' isExternal>
+          https://demo.mervarch.com <ExternalLinkIcon mx='2px' />
+        </Link>
+
+        <Text p={1}>
+          This live demo IS the example project running on a server, utilizing docker swarm.
         </Text>
       </Box>
     </Container>
