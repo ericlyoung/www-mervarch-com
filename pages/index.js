@@ -194,6 +194,10 @@ const Home = () => {
 
         <Text p={1}>
           This live demo IS the example project running on a server, utilizing docker swarm.
+          <br />
+          <b>MAJOR WORK IN PROGRESS</b>
+          <br />
+          I barely have the UI concept implemented, but there's one simple scenario I take you through.
         </Text>
       </Box>
     </Container>
