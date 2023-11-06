@@ -188,7 +188,7 @@ const Home = () => {
       <Heading mt={5} mb={5} size='md' color={headingColor}>Live Demo</Heading>
 
       <Box>
-        <Link color='purple' p={1} href='https:/demo.mervarch.com' isExternal>
+        <Link color='purple' p={1} href='https://demo.mervarch.com' isExternal>
           https://demo.mervarch.com <ExternalLinkIcon mx='2px' />
         </Link>
 
